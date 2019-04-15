@@ -1,0 +1,55 @@
+@charset "UTF-8";
+body, div, dl, dt, dd, p, ul, ol, li, form, textarea, input, table, th, tr, td, h1, h2, h3, h4, h5, blockquote, figure {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+body {
+  width: 100%;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: 100%;
+  line-height: 1.6;
+  font-family: Arial, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  position: relative;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, th {
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+  vertical-align: bottom;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/* clearfix */
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}

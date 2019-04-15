@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<html lang=“ja”>
+
+<head>
+
+                <title>みっぽんストア</title>
+        <link rel="stylesheet" type="text/css" href="./css/style_page.css">
+        <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    
+        <link rel="stylesheet" href="./css/stylenum.css" media="all">
+        <meta charset=“UFT-8”>
+        <meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="css/stylenum.css" media="all">
+<script src="js/jquery.js"></script>
+<script src="js/jquery.pagination.js"></script>
+   
+        <!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+<script type="text/javascript">
+$(function(){
+   
+    var $setFilter = $('#filter'),
+    $setList = $('#filterlist'),
+    $setFilterAll = $('.allitem');
+ 
+    var showFade = 2000,
+    showShut = 2000,
+    hideFade = 1500,
+    hideShut = 1500;
+ 
+    var $setFilterBtn = $setFilter.children('a'),
+    $setFilterList = $setList.children('ul').children('li'),
+    $filterAllItem = $setFilterAll.attr('class');
+ 
+    $setFilterBtn.click(function(){
+        if(!($(this).hasClass('active'))){
+            var filterClass = $(this).attr('class');
+            $setFilterList.each(function(){
+                if($(this).hasClass(filterClass)){
+                    $(this).css({display:'block'});
+                    $(this).find('*').stop().animate({opacity:'1'},showFade);
+                    $(this).stop().animate({width:'200px'},showShut);
+                } else {
+                    $(this).find('*').stop().animate({opacity:'0'},hideFade);
+                    $(this).stop().animate({width:'0'},hideShut,function(){
+                        $(this).css({display:'none'});
+                    });
+                }
+            });
+            $setFilterBtn.removeClass('active');
+            $(this).addClass('active');
+        }
+    });
+ 
+    $setFilterAll.click(function(){
+        $setFilterList.each(function(){
+            $(this).css({display:'block'});
+            $(this).find('*').stop().animate({opacity:'1'},showFade);
+            $(this).stop().animate({width:'200px'},showShut);
+        });
+    });
+    $setFilterAll.click();
+});
+$(function () {
+
+$('.downloadButton a').on('click', function(e){
+
+var hrefPath = $(this).attr('href');      
+
+var fileName = $(this).attr('href').replace(/\\/g,'/').replace( /.*\//, '' );
+
+$target = $(e.target);
+
+$target.attr({
+
+download: fileName,
+href: hrefPath
+
+});
+});
+});
+$(function() {
+
+ /*ページネーションここから*/
+ $('.list').pagination({
+		element      :'li',
+		prevText     : '＜',
+		nextText     : '＞',
+		firstText    : '≪',
+		lastText     : '≫',
+		ellipsisText : '…',
+		viewNum      : 8,
+		pagerNum     : 3,
+		ellipsis     : false,
+		linkInvalid  : true,
+		goTop        : true,
+		firstLastNav : true,
+		prevNextNav  : true
+	});
+});
+
+</script>
+</head>
+<body>
+        
+         <nav>
+                <ul class="menu">
+                  <li class="menu__none"><a href="mipponstore.html">Home</a></li>
+                  <li class="menu__none"><a href="3D_all.html">3D</a></li>
+                  <li class="menu__none"><a href="2D_all.html">2D</a></li>
+                  <li class="menu__single">
+                        <a href="#" class="init-bottom">Work</a>
+                        <ul class="menu__second-level">
+                          <li><a href="#">picture</a></li>
+                          <li><a href="#">game</a></li>
+                          <li><a href="#">animation</a></li>
+                        </ul>
+                      </li>
+        
+        
+                    <li class="menu__single">
+                        <a href="#" class="init-bottom">Contact</a>
+                        <ul class="menu__second-level">
+                          <li><a href="#">mail</a></li>
+                          <li><a href="contribution.php">contribution</a></li>
+                         
+                        </ul>
+                      </li>
+          
+     
+                </ul>
+              </nav>
+    <div id="side_menu">
+              <div id="filter">
+                  
+                    <a href="javascript:void(0);" class="allitem">ALL</a> 
+                     <a href="javascript:void(0);" class="human">人型</a>
+                     <a href="javascript:void(0);" class="animal">動物</a> 
+                     <a href="javascript:void(0);" class="plant">植物</a> 
+                     <a href="javascript:void(0);" class="weapon">武器</a>
+                     <a href="javascript:void(0);" class="car">乗り物</a>
+                     <a href="javascript:void(0);" class="food">食べ物</a>
+                     <a href="javascript:void(0);" class="building">建物</a>
+                     <a href="javascript:void(0);" class="furniture">家具</a>
+                     <a href="javascript:void(0);" class="sky">空</a>
+                
+              </div>
+    </div>         
+    <div class="list">      
+                 <div id="filterlist">
+                    
+                     <ul>
+                   
+                        <li class="human">
+                            <a href="#"> <img src="2Dassets/princess.png" alt="" /></a>
+                
+                            <p class="downloadButton1"><a href="3Daseets/princess.zip">zip形式</a></p>
+                            <p class="downloadButton2"><a href="3Daseets/princess.vox">vox形式</a></p>
+                        </li>
+    
+                    <li class="human">
+                        <a href="#"> <img src="2Dassets/mario.png" alt="" /></a>
+            
+                        <p class="downloadButton1"><a href="3Daseets/mario.zip">zip形式</a></p>
+                        <p class="downloadButton2"><a href="3Daseets/mario.vox">vox形式</a></p>
+                    </li>
+
+                    <li class="human">
+                        <a href="#"> <img src="2Dassets/ruizi.png" alt="" /></a>
+            
+                        <p class="downloadButton1"><a href="3Daseets/ruizi.zip">zip形式</a></p>
+                        <p class="downloadButton2"><a href="3Daseets/ruizi.vox">vox形式</a></p>
+                    </li>
+
+                    <li class="human">
+                        <a href="#"> <img src="2Dassets/eilian.png" alt="" /></a>
+            
+                        <p class="downloadButton1"><a href="3Daseets/eilian.zip">zip形式</a></p>
+                        <p class="downloadButton2"><a href="3Daseets/eilian.vox">vox形式</a></p>
+                    </li>
+                   
+                    <li class="animal"><a href="#"><img src="2Dassets/wheel.png" alt="" /></a>
+                        <p class="downloadButton1"><a href="3Daseets/eilian.zip">zip形式</a></p>
+                        <p class="downloadButton2"><a href="3Daseets/eilian.vox">vox形式</a></p>
+                    </li>
+                    <li class="animal"><a href="#"><img src="2Dassets/kame.png" alt="" /></a>
+                        <p class="downloadButton1"><a href="3Daseets/eilian.zip">zip形式</a></p>
+                        <p class="downloadButton2"><a href="3Daseets/eilian.vox">vox形式</a></p>
+                    </li>
+                    <li class="animal"><a href="#"><img src="2Dassets/nimo1.png" alt="" /></a>
+                        <p class="downloadButton1"><a href="3Daseets/eilian.zip">zip形式</a></p>
+                        <p class="downloadButton2"><a href="3Daseets/eilian.vox">vox形式</a></p>
+                    </li>
+                    <li class="car"><a href="#"><img src="2Dassets/baluun3.png" alt="" /></a>
+                        <p class="downloadButton1"><a href="3Daseets/eilian.zip">zip形式</a></p>
+                        <p class="downloadButton2"><a href="3Daseets/eilian.vox">vox形式</a></p>
+                    </li>
+                    <li class="human">
+                            <a href="#"> <img src="2Dassets/eilian.png" alt="" /></a>
+                
+                            <p class="downloadButton1"><a href="3Daseets/eilian.zip">zip形式</a></p>
+                            <p class="downloadButton2"><a href="3Daseets/eilian.vox">vox形式</a></p>
+                        </li>
+                       
+                        <li class="animal"><a href="#"><img src="2Dassets/wheel.png" alt="" /></a>
+                            <p class="downloadButton1"><a href="3Daseets/eilian.zip">zip形式</a></p>
+                            <p class="downloadButton2"><a href="3Daseets/eilian.vox">vox形式</a></p>
+                        </li>
+                        <li class="animal"><a href="#"><img src="2Dassets/kame.png" alt="" /></a>
+                            <p class="downloadButton1"><a href="3Daseets/eilian.zip">zip形式</a></p>
+                            <p class="downloadButton2"><a href="3Daseets/eilian.vox">vox形式</a></p>
+                        </li>
+                        <li class="animal"><a href="#"><img src="2Dassets/nimo1.png" alt="" /></a>
+                            <p class="downloadButton1"><a href="3Daseets/eilian.zip">zip形式</a></p>
+                            <p class="downloadButton2"><a href="3Daseets/eilian.vox">vox形式</a></p>
+                        </li>
+                        <li class="car"><a href="#"><img src="2Dassets/baluun3.png" alt="" /></a>
+                            <p class="downloadButton1"><a href="3Daseets/eilian.zip">zip形式</a></p>
+                            <p class="downloadButton2"><a href="3Daseets/eilian.vox">vox形式</a></p>
+                        </li>
+                        <li class="building"><a href="#"><img src="2Dassets/zinzya.png" alt="" /></a>
+                            <p class="downloadButton1"><a href="3Daseets/zinzya.zip">zip形式</a></p>
+                            <p class="downloadButton2"><a href="3Daseets/zinzya.vox">vox形式</a></p>
+                        </li>
+            
+                 </ul>
+                 <div class="pager"></div>
+	             <div class="pageNum"><span class="nownum"></span>/<span class="totalnum"></span>pages</div>
+                
+                 </div>
+            </div>
+                   
+    </body>
+    </html>

@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+body {
+   /* 画像ファイルの指定 */
+  background-image: url(images/bg2.png);
+   
+  /* 画像を常に天地左右の中央に配置 */
+  background-position: center top;
+   
+  /* 画像をタイル状に繰り返し表示しない */
+  background-repeat: no-repeat;
+   
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+  background-attachment: scroll;
+   
+  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+  background-size: auto 100%;
+   
+  /* 背景画像が読み込まれる前に表示される背景のカラー */
+  background-color: #464646;
+
+  background: url(bg2.png) center top/ cover no-repeat scroll;
+    text-align: center;
+
+    position: relative;
+    z-index:1;
+  }
+  
+  
+  h1{
+    /* margin: 20px; */
+    font-family: "impact";
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    opacity: 0.3;
+  }
+  
+  h1 span {
+    display: block;
+    margin: 11px 0 17px 0;
+    font-size: 80px;
+    line-height: 80px;
+    color: #ffffff rgba(255, 255, 255, 0.089);
+    text-shadow: 0 13.36px 8.896px #ffffff,0 -2px 1px #fff;
+    letter-spacing: -4px;
+  }
+ 
+  #wrapper{
+    position: relative;
+    z-index: 30;
+  }
+
+#bg_assets{
+    background-image: url(bg2.png); /* 32bit透過PNG */
+        
+        /* 画像を常に天地左右の中央に配置 */
+        background-position: center top;
+        
+        /* 画像をタイル状に繰り返し表示しない */
+        background-repeat: no-repeat;
+        
+        /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+        background-attachment: scroll;
+        
+        /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+        background-size: auto 100%;
+        
+        /* 背景画像が読み込まれる前に表示される背景のカラー */
+        background-color: #ffffff00;
+        background: url(bg2.png) center top/ cover no-repeat scroll;
+        text-align: center;
+
+    position: relative;
+    z-index: 20;
+    }
+ #bg2 {
+
+
+}

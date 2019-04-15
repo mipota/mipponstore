@@ -1,0 +1,337 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+/*---------------ナビゲーション-----------------*/
+/*ナビゲーション内の文字*/
+.menu {
+    position: relative;
+    width: 90%;
+    height: 50px;
+    max-width: 2000px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 40;
+}
+
+ul{
+    list-style:none;/*リストタグを非表示*/
+}
+
+.menu > li {
+    float: left;
+    width: 20%; /* グローバルナビ5つの場合 */
+    height: 50px;
+    line-height: 50px;
+    background: rgb(29, 33, 19);
+}
+
+.menu > li a {
+    display: block;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;  
+}
+
+.menu > li a:hover {
+    color: #999;
+}
+
+ul.menu__second-level {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+
+ul.menu__third-level {
+    visibility: hidden;
+    opacity: 0;
+}
+
+ul.menu__fourth-level {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menu > li:hover {
+    background: #072A24;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.menu__second-level li {
+    border-top: 1px solid #111;
+}
+
+.menu__third-level li {
+    border-top: 1px solid #111;
+}
+
+.menu__second-level li a:hover {
+    background: #111;
+}
+
+.menu__third-level li a:hover {
+    background: #2a1f1f;
+}
+
+.menu__fourth-level li a:hover {
+    background: #1d0f0f;
+}
+
+/* 下矢印 */
+.init-bottom:after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 0 0 15px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* floatクリア */
+.menu:before,
+.menu:after {
+    content: " ";
+    display: table;
+}
+
+.menu:after {
+    clear: both;
+}
+
+.menu {
+    *zoom: 1;
+}
+/*シングルナビゲーション*/
+.menu > li.menu__single {
+    position: relative;
+}
+
+li.menu__single ul.menu__second-level {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    background: #072A24;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+li.menu__single:hover ul.menu__second-level {
+    top: 50px;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+        /* #filter
+--------------------------- */
+#side_menu{
+    position: fixed;
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 20vh;
+    min-width: 50px;
+   left:5%;
+   top:10vh;
+    background-color: #87cefa;
+    opacity: 0.8;
+    z-index: 5;
+}
+
+#filter {
+    margin: 0 auto;
+    padding: 10px 0;
+    width:10vh;
+    text-align: center;
+    font-size: 2.5vh;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 1.0;
+}
+#filter a:link { text-decoration:underline; color: #000;}
+#filter a:visited { text-decoration:none; color: #000;}
+#filter a:active { text-decoration:none; color: #000;}
+#filter a:hover { text-decoration:none; color: #000;}
+ 
+#filter .active {
+    font-weight: bold;
+}
+#filter a.active:link { text-decoration:none; color: #000;}
+#filter a.active:visited { text-decoration:none; color: #000;}
+#filter a.active:active { text-decoration:none; color: #000;}
+#filter a.active:hover { text-decoration:none; color: #000;}
+
+/* #filterlist
+--------------------------- */
+#filterlist {
+    position: absolute;
+    margin: 0 auto;
+    left:20%; 
+    top:10vh;
+    width: 1000px;
+    text-align: left;
+   
+}
+ 
+#filterlist ul {
+    position: relative;
+    left: 0%;
+    margin: 0 auto;
+    padding: 0;
+    width: 1000px;
+    text-align: left;
+}
+ 
+#filterlist ul li {
+    margin: 5px;
+    width: 200px;
+    text-align: left;
+    float: left;
+    display: inline;
+    overflow: hidden;
+}
+ 
+#filterlist ul li img {
+    width: 200px;
+    height:200px;
+    margin: 10px;
+    float: left;
+   
+}
+.downloadButton1 {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25em 0;
+    text-decoration: none;
+    color: #67c5ff;   
+    top:-3vh;
+    left:5vh;
+}
+ .downloadButton1:before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    top:100%;
+    left: 0;
+    border-radius: 3px;
+    background:#67c5ff;
+    transition: .2s;
+ }
+ .downloadButton1:hover:before{
+    top: -webkit-calc(100% - 3px);
+    top: calc(100% - 3px);
+ }
+ .downloadButton2 {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25em 0;
+    text-decoration: none;
+    color: #ffc0cb; 
+    top:-3vh;  
+    left:8vh;
+}
+ .downloadButton2:before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    top:100%;
+    left: 0;
+    border-radius: 3px;
+    background:#ffc0cb;
+    transition: .2s;
+ }
+ .downloadButton2:hover:before{
+    top: -webkit-calc(100% - 3px);
+    top: calc(100% - 3px);
+ }
+ .downloadButton3 {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25em 0;
+    text-decoration: none;
+    color: #98fb98; 
+    top:-3vh;  
+    left:10vh;
+}
+ .downloadButton3:before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    top:100%;
+    left: 0;
+    border-radius: 3px;
+    background:#98fb98;
+    transition: .2s;
+ }
+ .downloadButton3:hover:before{
+    top: -webkit-calc(100% - 3px);
+    top: calc(100% - 3px);
+ }
+
+/* =======================================
+    ClearFixElements
+======================================= */
+#filterlist ul:after {
+    content: ".";
+    height: 0;
+    clear: both;
+    display: block;
+    visibility: hidden;
+}
+ 
+#filterlist ul {
+    display: inline-block;
+    overflow: hidden;
+}
+/*ページ飛ばし*/
+
+
+.pager {
+    clear:both;
+    margin:30px 0;
+    text-align:center;
+}
+
+.pager span {
+    margin:5px;
+    padding:5px 8px;
+    color:#fff;
+    background:#000;
+}
+.pager span:hover {
+    cursor:pointer;
+    background:#999;
+}
+
+.pager span.current {
+    color:#000;
+    background:none;
+}
+.pager span.current:hover {
+    cursor:default;
+}
+
+.pager span.invalid {
+    color:#dcdcdc;
+    background:none;
+}
+.pager span.invalid:hover {
+    cursor:default;
+}
+
+.pager span.ellipsis {
+    color:#000;
+    background:none;
+}
+.pager span.ellipsis:hover {
+    cursor:default;
+}

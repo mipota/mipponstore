@@ -1,0 +1,378 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+/*全体*/
+body {
+    font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic'  
+    }
+    
+h1{
+    font-family: Impact;
+    text-transform: uppercase;  /*大文字*/
+    letter-spacing: -1px;       /*文字間隔*/
+    opacity: 0.8;               /* 透明度*/
+    position: relative;
+    z-index: 30;
+   
+}
+ h1 span{
+     display: block;            /*spanごとにブロック化*/
+     margin: 11px 0 17px 0;
+     font-size: 140px;
+    line-height: 100px;
+    letter-spacing: -4px;
+   text-align: center;
+   
+ } 
+ /*h1の位置を調節*/
+.wholl{
+   position: relative;
+   width:100%;
+   height:100%;
+   text-align: center;
+}
+/*h2について*/
+.wholl h1{
+position: absolute;
+top:40vh;
+left:50%;
+-ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+}
+.contents1 h2{
+    position: absolute;
+    left:50%;
+    top:60vh;
+    -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+}
+.contents2 h2{
+    position: absolute;
+    left:50%;
+    top:5vh;
+    -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+}
+.contents2 h3{
+    position: absolute;
+    left:50%;
+    top:20vh;
+    -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+}
+.contents3 h2{
+    position: absolute;
+    left:50%;
+    top:50vh;
+    -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+}
+.contents3 h3{
+    position: absolute;
+    left:50%;
+    top:65vh;
+    -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+}
+h2{
+    font-family: Impact;  
+    letter-spacing: -1px;       /*文字間隔*/
+    opacity: 0.8;               /* 透明度*/
+    font-size: 12vh;
+}
+h3{
+    font-family: Impact;  
+    letter-spacing: -1px;       /*文字間隔*/
+    opacity: 0.8;               /* 透明度*/
+    font-size: 7vh;
+}
+
+.no1 p{
+    font-size:3.0vh;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    text-align: center;
+    left:50%;
+   width:90%;
+   -ms-transform: translate(-50%,0%);
+  -webkit-transform: translate(-50%,0%);
+  transform: translate(-50%,0%);
+    margin:0;
+    padding:0;
+    line-height: 200%;
+    top:70vh
+}
+.no2 p{
+    font-size:3.0vh;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    text-align: center;
+    left:50%;
+   width:90%;
+   -ms-transform: translate(-50%,0%);
+  -webkit-transform: translate(-50%,0%);
+  transform: translate(-50%,0%);
+    margin:0;
+    padding:0;
+    line-height: 200%;
+    top:30vh
+}
+.no3 p{
+    font-size:3.0vh;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    text-align: center;
+    left:50%;
+   width:90%;
+   -ms-transform: translate(-50%,0%);
+  -webkit-transform: translate(-50%,0%);
+  transform: translate(-50%,0%);
+    margin:0;
+    padding:0;
+    line-height: 200%;
+    top:70vh
+}
+p{
+    font-size:20px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    text-align: center;
+   width:90%;
+    margin:0;
+    padding:0;
+}
+/*
+ループスライダー
+*/
+.loopSliderWrap {
+    top: 0;
+    left: 0;
+    height: 840px;
+    overflow: hidden;
+    position: absolute;
+}
+ 
+.loopSlider {
+    margin: 0 auto;
+    width: 90%;
+    height: 700px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+     
+}
+ 
+.loopSlider ul {
+    height: 840px;
+    float: left;
+    overflow: hidden;
+}
+ 
+.loopSlider ul li {
+    width: 600px;
+    height:840px;
+    float: left;
+    display: inline;
+    overflow: hidden;
+}
+ 
+/* ------------------------------
+   CLEARFIX ELEMENTS
+------------------------------ */
+.loopSliderWrap:after {
+    content: "";
+    display: none;
+    clear: none;
+}
+*{
+margin:0;
+padding:0;
+}
+/*---------------ナビゲーション-----------------*/
+/*ナビゲーション内の文字*/
+.menu {
+    position: relative;
+    width: 90%;
+    height: 50px;
+    max-width: 2000px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 40;
+}
+
+ul{
+    list-style:none;/*リストタグを非表示*/
+}
+
+.menu > li {
+    float: left;
+    width: 20%; /* グローバルナビ5つの場合 */
+    height: 50px;
+    line-height: 50px;
+    background: rgb(29, 33, 19);
+}
+
+.menu > li a {
+    display: block;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;  
+}
+
+.menu > li a:hover {
+    color: #999;
+}
+
+ul.menu__second-level {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+
+ul.menu__third-level {
+    visibility: hidden;
+    opacity: 0;
+}
+
+ul.menu__fourth-level {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menu > li:hover {
+    background: #072A24;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.menu__second-level li {
+    border-top: 1px solid #111;
+}
+
+.menu__third-level li {
+    border-top: 1px solid #111;
+}
+
+.menu__second-level li a:hover {
+    background: #111;
+}
+
+.menu__third-level li a:hover {
+    background: #2a1f1f;
+}
+
+.menu__fourth-level li a:hover {
+    background: #1d0f0f;
+}
+
+/* 下矢印 */
+.init-bottom:after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 0 0 15px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* floatクリア */
+.menu:before,
+.menu:after {
+    content: " ";
+    display: table;
+}
+
+.menu:after {
+    clear: both;
+}
+
+.menu {
+    *zoom: 1;
+}
+/*シングルナビゲーション*/
+.menu > li.menu__single {
+    position: relative;
+}
+
+li.menu__single ul.menu__second-level {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    background: #072A24;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+li.menu__single:hover ul.menu__second-level {
+    top: 50px;
+    visibility: visible;
+    opacity: 1;
+}
+
+/*アニメーション*/ 
+.contents1 {
+    position: relative;
+    width: 80%;
+    height: 180vh;
+    margin: 0 auto;
+}
+.contents2 {
+    position: relative;
+    width: 80%;
+    height: 100vh;
+    margin:0 auto;
+}
+.contents3 {
+    position: relative;
+    width: 80%;
+    height: 170vh;
+    margin:0 auto;
+}
+
+.line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 0;
+    height: 100vh;
+    background: #ff6347;
+}
+.no1 .line {
+	left: 0;
+    right: 0;
+}
+.no2 .line {
+	left: 0;
+    right: 0;
+    background:  #87cefa;
+    height:130vh;
+}
+.no3 .line {
+	left: 0;
+    right: 0;
+    background: #00ff7f;
+    height:100vh;
+}
